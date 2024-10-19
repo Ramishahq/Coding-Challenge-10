@@ -32,3 +32,4 @@ sizeSelector.addEventListener('change', function(event) {
         purchaseButton.disabled = true;  
     }
 });
+
