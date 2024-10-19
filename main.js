@@ -33,7 +33,6 @@ sizeSelector.addEventListener('change', function(event) {
     }
 });
 
-// task 4 Create a Checkout Event 
 // Task 4 Create a Checkout Event 
 purchaseButton.addEventListener('click', function() {
     const selectedSize = sizeSelector.value;  
@@ -42,17 +41,6 @@ purchaseButton.addEventListener('click', function() {
     if (selectedStock.available > 0) {
         // Show a confirmation message
         alert(`Purchased ${selectedSize} for $${selectedStock.price}.`);
-        
-        // Reduce available stock by 1
-        selectedStock.available--; 
-
-        // Update the stock status
-        if (selectedStock.available === 0) {
-            stockStatusElement.textContent = "Out of Stock"; 
-            purchaseButton.disabled = true; // Disable the purchase button
-        } else {
-            stockStatusElement.textContent = "In Stock"; // Keep it in stock if still available
-        }
     } else {
         // Show an out-of-stock message
         alert(`Sorry, ${selectedSize} is out of stock.`);
