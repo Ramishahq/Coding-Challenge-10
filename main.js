@@ -40,10 +40,10 @@ purchaseButton.addEventListener('click', function() {
 
     if (selectedStock.available > 0) {
         // Show a confirmation message
-        alert(`Purchased ${selectedSize} for $${selectedStock.price}.`);
+        alert(`Successfully Purchased ${selectedSize} size skirt for $${selectedStock.price}.`);
     } else {
         // Show an out-of-stock message
-        alert(`Sorry, ${selectedSize} is out of stock.`);
+        alert(`Sorry, unfortunately the product ${selectedSize} is out of stock.`);
     }
 });
 
